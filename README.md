@@ -285,3 +285,70 @@ public class MyService : IMyService
 }
 
 
+Major OOP Concepts
+1.	Encapsulation
+•	Bundling data and methods that operate on that data within a class.
+•	Access modifiers (public, private, protected, internal).
+2.	Abstraction
+•	Hiding complex implementation details and showing only the necessary features.
+•	Achieved using abstract classes and interfaces.
+3.	Inheritance
+•	Mechanism to derive a new class from an existing class.
+•	Supports code reuse and hierarchical relationships.
+4.	Polymorphism
+•	Ability to take many forms.
+•	Compile-time (method overloading) and runtime (method overriding via virtual/override).
+ 
+Additional OOP Topics
+•	Classes and Objects
+•	Constructors and Destructors
+•	Static vs Instance Members
+•	Sealed Classes
+•	Partial Classes
+•	Abstract Classes vs Interfaces
+•	Access Modifiers
+•	Properties, Indexers, and Events
+•	Operator Overloading
+•	Exception Handling in OOP
+•	Design Patterns (Singleton, Factory, etc.)
+ 
+Common OOP Interview Questions
+1.	What is the difference between abstraction and encapsulation?
+2.	How does inheritance work in C#? Can you inherit from multiple classes?
+3.	What is polymorphism? Explain with examples.
+4.	When would you use an abstract class vs an interface?
+5.	What are access modifiers and why are they important?
+6.	How does method overloading differ from method overriding?
+7.	What is a sealed class and when would you use it?
+8.	Explain the concept of constructor chaining.
+9.	What is the purpose of the base and this keywords?
+10.	How do you implement encapsulation in C#?
+
+
+Certainly! Here are more OOP and .NET Core interview/practice questions to help deepen your understanding:
+ 
+OOP Questions
+1.	What is the difference between a class and an object?
+2.	Explain the concept of constructor overloading.
+3.	What is method hiding? How is it different from method overriding?
+4.	What is an interface and how is it different from an abstract class?
+5.	How does C# support multiple inheritance?
+6.	What is the purpose of the sealed keyword in C#?
+7.	What is the difference between static and instance members?
+8.	How do you implement encapsulation in C#?
+9.	What is the use of the base keyword?
+10.	What is operator overloading? Give an example.
+ 
+.NET Core Questions
+1.	What is the difference between IActionResult and ActionResult<T> in ASP.NET Core?
+2.	How do you implement exception handling in ASP.NET Core?
+3.	What is middleware? How do you create custom middleware?
+4.	How does model validation work in ASP.NET Core?
+5.	What is dependency injection and how is it configured in .NET Core?
+6.	How do you use configuration and options pattern in .NET Core?
+7.	What is the difference between synchronous and asynchronous programming in .NET Core?
+8.	How do you secure an ASP.NET Core Web API?
+9.	What is the purpose of app.UseEndpoints()?
+10.	How do you implement logging in .NET Core?
+ 
+ 
