@@ -145,3 +145,88 @@ The ProviderName property is maintained in one place.
 You avoid repeating common code in every provider.
 
 Each provider only focuses on its own validation and recharge logic.
+
+
+1. What is .NET Core?
+Answer:
+.NET Core is a cross-platform, open-source framework for building modern, cloud-based, and internet-connected applications. It supports Windows, Linux, and macOS.
+
+2. What are the main differences between .NET Core and .NET Framework?
+Answer:
+•	.NET Core is cross-platform; .NET Framework is Windows-only.
+•	.NET Core is open-source; .NET Framework is not fully open-source.
+•	.NET Core supports side-by-side versioning; .NET Framework does not.
+
+3. What is Dependency Injection in .NET Core?
+Answer:
+Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC) between classes and their dependencies. .NET Core has built-in support for DI via the IServiceCollection and IServiceProvider.
+
+4. What is Middleware in ASP.NET Core?
+Answer:
+Middleware is software that is assembled into an application pipeline to handle requests and responses. Each middleware component can process requests, pass them to the next component, or short-circuit the pipeline.
+
+5. How do you configure services in .NET Core?
+Answer:
+Services are configured in the Program.cs or Startup.cs file using the IServiceCollection interface, typically in the ConfigureServices method.
+
+6. What is the purpose of the appsettings.json file?
+Answer:
+appsettings.json is used to store configuration data such as connection strings, app settings, and logging configuration. It supports hierarchical data and can be loaded into the configuration system.
+
+7. How do you implement logging in .NET Core?
+Answer:
+.NET Core provides built-in logging via the ILogger<T> interface. You can log information, warnings, errors, etc., and integrate with providers like Console, Debug, Serilog, NLog, etc.
+
+8. What is Kestrel?
+Answer:
+Kestrel is a cross-platform web server for ASP.NET Core applications. It is the default web server and is designed for high performance.
+
+9. How do you enable CORS in ASP.NET Core?
+Answer:
+CORS (Cross-Origin Resource Sharing) can be enabled by adding services with services.AddCors() and configuring policies in Configure using app.UseCors().
+
+10. What is Entity Framework Core?
+Answer:
+Entity Framework Core (EF Core) is an ORM (Object-Relational Mapper) for .NET Core. It allows developers to work with databases using .NET objects, supports LINQ queries, and handles database migrations.
+
+1. What is the difference between IServiceCollection and IServiceProvider?
+Answer:
+IServiceCollection is used to register services and configure dependency injection. IServiceProvider is used to resolve and provide service instances at runtime.
+
+2. What are the lifetimes of services in .NET Core DI?
+Answer:
+•	Singleton: One instance for the entire application.
+•	Scoped: One instance per HTTP request.
+•	Transient: A new instance every time the service is requested.
+
+3. How do you implement custom middleware in ASP.NET Core?
+Answer:
+Create a class with an Invoke or InvokeAsync method that takes HttpContext as a parameter. Register it in the pipeline using app.UseMiddleware<YourMiddleware>().
+
+4. What is the purpose of the app.UseRouting() and app.UseEndpoints() methods?
+Answer:
+app.UseRouting() enables routing capabilities. app.UseEndpoints() defines the endpoints for the app (e.g., controllers, Razor Pages).
+
+5. How do you handle configuration in .NET Core?
+Answer:
+.NET Core uses the IConfiguration interface to read configuration from various sources like appsettings.json, environment variables, and command-line arguments.
+
+6. What is the difference between appsettings.json and appsettings.Development.json?
+Answer:
+appsettings.json contains default configuration. appsettings.Development.json overrides settings for the Development environment.
+
+7. How do you enable HTTPS redirection in ASP.NET Core?
+Answer:
+By calling app.UseHttpsRedirection() in the middleware pipeline.
+
+8. What is Model Binding in ASP.NET Core?
+Answer:
+Model binding maps data from HTTP requests (route, query string, form, body) to action method parameters.
+
+9. How do you return different HTTP status codes from a controller action?
+Answer:
+Use built-in methods like Ok(), BadRequest(), NotFound(), Created(), etc., or return an IActionResult with a specific status code.
+
+10. What is the purpose of IHostedService?
+Answer:
+IHostedService is used to run background tasks in ASP.NET Core, such as consuming messages from a queue or scheduled jobs.
