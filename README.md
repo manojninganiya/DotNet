@@ -471,3 +471,23 @@ Intermediate/Advanced Questions
 8.	What is the difference between a function and a stored procedure?
 9.	How do you perform backup and restore operations in SQL Server?
 10.	What is SQL Server Agent?
+
+What is CI/CD?
+•	Continuous Integration (CI):
+Developers frequently merge code changes into a shared repository. Each merge triggers an automated build and test process, ensuring code quality and early bug detection.
+•	Continuous Deployment/Delivery (CD):
+After CI, code is automatically (deployment) or manually (delivery) released to production or staging environments. This automates the release process and reduces manual errors.
+---
+Typical CI/CD Pipeline Steps
+1.	Source Control:
+Code is pushed to a repository (e.g., GitHub, Azure Repos).
+2.	Build:
+The application is built (e.g., using dotnet build for .NET).
+3.	Test:
+Automated tests are run (e.g., dotnet test).
+4.	Publish/Package:
+The build output is packaged for deployment.
+5.	Deploy:
+The package is deployed to a server, cloud, or container.
+6.	Monitor:
+Application health and logs are monitored post-deployment.
