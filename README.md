@@ -352,3 +352,122 @@ OOP Questions
 10.	How do you implement logging in .NET Core?
  
  
+Basic Concepts
+1.	What is MVC? Explain its components.
+2.	What is the role of a Controller in MVC?
+3.	How does routing work in ASP.NET Core MVC?
+4.	What is a ViewModel and why is it used?
+5.	What is the difference between ViewData, ViewBag, and TempData?
+6.	How do you pass data from a Controller to a View?
+7.	What is model binding in MVC?
+8.	How do you perform validation in MVC?
+9.	What are Action Results? Name a few types.
+10.	What is the purpose of filters in MVC?
+---
+Intermediate/Advanced
+1.	How do you implement custom filters in ASP.NET Core MVC?
+2.	What is dependency injection and how is it used in controllers?
+3.	How do you handle exceptions in MVC applications?
+4.	What is Partial View? When would you use it?
+5.	What is the difference between a Partial View and a Layout View?
+6.	How do you implement authentication and authorization in MVC?
+7.	What is Razor syntax?
+8.	How do you use Tag Helpers in ASP.NET Core MVC?
+9.	What is the difference between synchronous and asynchronous action methods?
+10.	How do you return JSON data from a controller?
+
+    Basic Questions
+1.	What is a Web API?
+2.	What is the difference between Web API and MVC?
+3.	How do you create a simple Web API in ASP.NET Core?
+4.	What are HTTP verbs and how are they used in Web API?
+5.	How do you route requests to controller actions in Web API?
+6.	What is model binding in Web API?
+7.	How do you return different HTTP status codes from an API action?
+8.	What is the purpose of IActionResult and ActionResult<T>?
+9.	How do you enable CORS in ASP.NET Core Web API?
+10.	How do you document a Web API (e.g., using Swagger)?
+---
+Intermediate/Advanced Questions
+1.	How do you implement authentication and authorization in Web API?
+2.	What is dependency injection and how is it used in Web API controllers?
+3.	How do you handle exceptions and errors in Web API?
+4.	What is versioning in Web API and how do you implement it?
+5.	How do you secure sensitive data in Web API responses?
+6.	What is throttling and how can you implement rate limiting in Web API?
+7.	How do you test a Web API?
+8.	What is the difference between synchronous and asynchronous API actions?
+9.	How do you use filters (like action filters, exception filters) in Web API?
+10.	How do you implement custom middleware for logging or error handling in Web API?
+
+    Basic Questions
+1.	What is WCF?
+2.	What are the main components of WCF?
+3.	What is an endpoint in WCF?
+4.	Explain the ABCs of WCF (Address, Binding, Contract).
+5.	What are bindings in WCF? Name a few types.
+6.	What is a service contract, data contract, and operation contract?
+7.	How do you host a WCF service?
+8.	What is the difference between WCF and Web API?
+9.	What is the purpose of the ServiceBehavior attribute?
+10.	How do you consume a WCF service in a client application?
+---
+Intermediate/Advanced Questions
+1.	What is the difference between BasicHttpBinding and WSHttpBinding?
+2.	How do you implement security in WCF?
+3.	What is message contract in WCF?
+4.	What is the purpose of the InstanceContextMode and ConcurrencyMode?
+5.	How do you handle transactions in WCF?
+6.	What is throttling in WCF and how do you configure it?
+7.	How do you enable and use reliable messaging in WCF?
+8.	What is the difference between PerCall, PerSession, and Single instance modes?
+9.	How do you implement error handling and fault contracts in WCF?
+10.	What are the different ways to host a WCF service (IIS, WAS, Self-hosting, Windows Service)?
+
+    Basic Questions
+1.	What is Angular and how is it different from AngularJS?
+2.	What are components in Angular?
+3.	What is a module in Angular?
+4.	What is data binding? Name the types of data binding in Angular.
+5.	What are directives? Name the types of directives in Angular.
+6.	What is a service in Angular and why is it used?
+7.	How do you create and use a service in Angular?
+8.	What is dependency injection in Angular?
+9.	What is routing in Angular?
+10.	How do you pass data between components?
+---
+Intermediate/Advanced Questions
+1.	What is the difference between ngOnInit and constructor in a component?
+2.	What are lifecycle hooks in Angular?
+3.	What is an Observable? How is it used in Angular?
+4.	How do you handle HTTP requests in Angular?
+5.	What is the purpose of the HttpClientModule?
+6.	What is lazy loading in Angular?
+7.	What is a guard in Angular routing? Name different types of guards.
+8.	How do you implement form validation in Angular?
+9.	What is the difference between template-driven and reactive forms?
+10.	What is Change Detection in Angular? How does it work?
+
+    Basic Questions
+1.	What is SQL Server?
+2.	What are the different types of SQL Server databases?
+3.	What is a primary key and a foreign key?
+4.	What is normalization? Explain its types.
+5.	What is a JOIN? Name different types of JOINs in SQL Server.
+6.	What is the difference between WHERE and HAVING clauses?
+7.	What is an index? Why is it used?
+8.	What is a stored procedure?
+9.	What is a view?
+10.	What is a trigger?
+---
+Intermediate/Advanced Questions
+1.	What is the difference between clustered and non-clustered indexes?
+2.	How do you optimize a slow-running query?
+3.	What is a transaction? Explain ACID properties.
+4.	What is deadlock? How can you prevent or resolve it?
+5.	What are the differences between DELETE, TRUNCATE, and DROP?
+6.	How do you implement security in SQL Server?
+7.	What is a CTE (Common Table Expression)?
+8.	What is the difference between a function and a stored procedure?
+9.	How do you perform backup and restore operations in SQL Server?
+10.	What is SQL Server Agent?
