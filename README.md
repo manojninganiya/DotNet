@@ -212,3 +212,76 @@ Use built-in methods like Ok(), BadRequest(), NotFound(), Created(), etc., or re
 
 **20. What is the purpose of IHostedService?** <br>
 IHostedService is used to run background tasks in ASP.NET Core, such as consuming messages from a queue or scheduled jobs.
+
+
+Here’s a clear comparison of AddScoped, AddSingleton, and AddTransient in .NET Core Dependency Injection:
+---
+1. AddSingleton<br>
+•	Lifetime: Only one instance is created and shared for the entire application lifetime.<br>
+•	When to use: For stateless services or services that maintain shared state/caches/configuration.<br>
+•	Example:
+	builder.Services.AddSingleton<IMyService, MyService>();
+	
+	Request 1 - Service1: 9f2a0c0b-4c92-41d7-8a11-ea7a3c8cb1f9<br>
+	Request 1 - Service2: 9f2a0c0b-4c92-41d7-8a11-ea7a3c8cb1f9<br>
+
+	Request 2 - Service1: 9f2a0c0b-4c92-41d7-8a11-ea7a3c8cb1f9<br>
+	Request 2 - Service2: 9f2a0c0b-4c92-41d7-8a11-ea7a3c8cb1f9<br>
+
+	
+2. AddScoped<br>
+•	Lifetime: One instance is created per HTTP request (scope). The same instance is used throughout a single request, but a new one is created for each new request.<br>
+•	When to use: For services that should be unique per request, such as database contexts (e.g., Entity Framework’s DbContext).<br>
+•	Example:
+	builder.Services.AddScoped<IMyService, MyService>();
+	
+	Request 1 - Service1: c1f105dc-b842-4b62-99a4-96c5024e4f2d<br>
+	Request 1 - Service2: c1f105dc-b842-4b62-99a4-96c5024e4f2d<br>
+
+	Request 2 - Service1: 82c764b5-d893-4cfb-ae80-ec82c5f72b12<br>
+	Request 2 - Service2: 82c764b5-d893-4cfb-ae80-ec82c5f72b12<br>
+
+	
+3. AddTransient<br>
+•	Lifetime: A new instance is created every time the service is requested.<br>
+•	When to use: For lightweight, stateless services or operations that do not need to maintain state between calls.<br>
+•	Example:
+	builder.Services.AddTransient<IMyService, MyService>();
+	
+	Request 1 - Service1: f6b10d21-9644-4e82-b1c0-5ff47b66d9a6<br>
+	Request 1 - Service2: 7383a5a2-6c77-465a-9b6b-9c89dc85e7a1<br>
+
+	Request 2 - Service1: 3bdf2b3b-e204-4c39-b0f1-32c99f72c689<br>
+	Request 2 - Service2: b1045fe2-0d55-4a69-81c5-e81aef6d4d4b<br>
+
+
+| Method         | Lifetime             | Use Case Example                |
+| -------------- | -------------------- | ------------------------------- |
+| `AddSingleton` | Application-wide     | Logging, configuration, caching |
+| `AddScoped`    | Per HTTP request     | Database context, unit of work  |
+| `AddTransient` | Every injection/call | Utility/helper services         |
+
+Tip:
+•	Use AddSingleton for shared, thread-safe services.
+•	Use AddScoped for services that should be unique per request.
+•	Use AddTransient for lightweight, stateless, and short-lived services.	
+
+
+public interface IMyService
+{
+    Guid GetOperationId();
+}
+
+public class MyService : IMyService
+{
+    private Guid _operationId;
+
+    public MyService()
+    {
+        _operationId = Guid.NewGuid();
+    }
+
+    public Guid GetOperationId() => _operationId;
+}
+
+
