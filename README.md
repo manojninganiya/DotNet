@@ -1,4 +1,4 @@
-Got it! Let’s translate the same concept—using an abstract class vs interface—into a recharge app scenario.
+An abstract class vs interface—into a recharge app scenario.
 
 Scenario: Recharge App
 Your app supports multiple Recharge Providers (like Airtel, Vodafone, etc.). Every provider:
@@ -10,9 +10,6 @@ Can perform a recharge operation.
 Has a method to validate the recharge amount (rules may vary).
 
 Using an Abstract Class in C#
-csharp
-Copy
-Edit
 // Abstract base class with common fields and methods
 public abstract class RechargeProvider
 {
@@ -80,9 +77,7 @@ public class VodafoneProvider : RechargeProvider
     }
 }
 Using an Interface in C#
-csharp
-Copy
-Edit
+
 public interface IRechargeProvider
 {
     string ProviderName { get; }
