@@ -148,44 +148,46 @@ Each provider only focuses on its own validation and recharge logic.
 
 
 1. What is .NET Core?
+
+
 Answer:
 .NET Core is a cross-platform, open-source framework for building modern, cloud-based, and internet-connected applications. It supports Windows, Linux, and macOS.
 
-2. What are the main differences between .NET Core and .NET Framework?
+3. What are the main differences between .NET Core and .NET Framework?
 Answer:
 •	.NET Core is cross-platform; .NET Framework is Windows-only.
 •	.NET Core is open-source; .NET Framework is not fully open-source.
 •	.NET Core supports side-by-side versioning; .NET Framework does not.
 
-3. What is Dependency Injection in .NET Core?
+4. What is Dependency Injection in .NET Core?
 Answer:
 Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC) between classes and their dependencies. .NET Core has built-in support for DI via the IServiceCollection and IServiceProvider.
 
-4. What is Middleware in ASP.NET Core?
+5. What is Middleware in ASP.NET Core?
 Answer:
 Middleware is software that is assembled into an application pipeline to handle requests and responses. Each middleware component can process requests, pass them to the next component, or short-circuit the pipeline.
 
-5. How do you configure services in .NET Core?
+6. How do you configure services in .NET Core?
 Answer:
 Services are configured in the Program.cs or Startup.cs file using the IServiceCollection interface, typically in the ConfigureServices method.
 
-6. What is the purpose of the appsettings.json file?
+7. What is the purpose of the appsettings.json file?
 Answer:
 appsettings.json is used to store configuration data such as connection strings, app settings, and logging configuration. It supports hierarchical data and can be loaded into the configuration system.
 
-7. How do you implement logging in .NET Core?
+8. How do you implement logging in .NET Core?
 Answer:
 .NET Core provides built-in logging via the ILogger<T> interface. You can log information, warnings, errors, etc., and integrate with providers like Console, Debug, Serilog, NLog, etc.
 
-8. What is Kestrel?
+9. What is Kestrel?
 Answer:
 Kestrel is a cross-platform web server for ASP.NET Core applications. It is the default web server and is designed for high performance.
 
-9. How do you enable CORS in ASP.NET Core?
+10. How do you enable CORS in ASP.NET Core?
 Answer:
 CORS (Cross-Origin Resource Sharing) can be enabled by adding services with services.AddCors() and configuring policies in Configure using app.UseCors().
 
-10. What is Entity Framework Core?
+11. What is Entity Framework Core?
 Answer:
 Entity Framework Core (EF Core) is an ORM (Object-Relational Mapper) for .NET Core. It allows developers to work with databases using .NET objects, supports LINQ queries, and handles database migrations.
 
